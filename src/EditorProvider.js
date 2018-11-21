@@ -1,12 +1,12 @@
 import React from 'react';
 
-const EditorContext = React.createContext();
+const EditorContext = React.createContext("EditorProvider");
 
 class EditorProvider extends React.Component { 
   render () {
     const { children } = this.props; 
     return (
-      <EditorContext.Provider value={{"chicken": 5}}>
+      <EditorContext.Provider value="chicken">
       {children}
       </EditorContext.Provider>
     );
@@ -14,3 +14,4 @@ class EditorProvider extends React.Component {
 }
 
 export default EditorProvider;
+export const EditorConsumer = EditorContext.Consumer;
