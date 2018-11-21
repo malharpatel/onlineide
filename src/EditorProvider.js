@@ -2,9 +2,9 @@ import React from 'react';
 
 const EditorContext = React.createContext("EditorProvider");
 
-class EditorProvider extends React.Component { 
+class EditorProvider extends React.Component {
   render () {
-    const { children } = this.props; 
+    const { children } = this.props;
     return (
       <EditorContext.Provider value="chicken">
       {children}

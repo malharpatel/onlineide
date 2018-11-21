@@ -4,7 +4,7 @@ import { EditorConsumer } from './EditorProvider.js';
 const tmpcode = "<h1> hi </h1>";
 
 
-class Preview extends React.Component { 
+class Preview extends React.Component {
   componentDidMount() {
     const iframe = document.getElementById('tmp');
     const iframedoc = iframe.contentDocument || iframe.contentWindow.document;
@@ -15,9 +15,12 @@ class Preview extends React.Component {
   render() {
     console.log(this);
     return (
-      <EditorConsumer> 
+      <div>
+        <EditorConsumer>
+          {(value) => <div>{value}</div>}
+        </EditorConsumer>
         <iframe id="tmp"/>
-      </EditorConsumer>
+      </div>
     );
   }
 }
