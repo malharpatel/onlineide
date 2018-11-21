@@ -1,4 +1,5 @@
 import React from 'react';
+import MonacoEditor from 'react-monaco-editor';
 
 class Editor extends React.Component { 
   constructor(props) {

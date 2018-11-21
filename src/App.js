@@ -1,14 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Editor from './Editor.js';
+import Preview from './Preview.js';
+import EditorProvider from './EditorProvider';
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-      <Editor/> 
-      </div>
+      <EditorProvider>
+        <Editor/>
+        <Preview/>
+      </EditorProvider>
     );
   }
 }
